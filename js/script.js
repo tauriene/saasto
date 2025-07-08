@@ -39,9 +39,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	let i = 1;
 	setInterval(() => {
 		slides[i].classList.add('testimonials__slide--active');
-		client.style.backgroundImage = `url("/images/client-${
-			i + 1
-		}.png")`;
+		client.style.backgroundImage = `url("/saasto/images/client-${i + 1}.png")`;
 
 		slides.forEach((e, idx) => i !== idx && e.classList.remove('testimonials__slide--active'));
 
