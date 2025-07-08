@@ -39,7 +39,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	let i = 1;
 	setInterval(() => {
 		slides[i].classList.add('testimonials__slide--active');
-		client.style.backgroundImage = `url("../images/client-${
+		client.style.backgroundImage = `url("/images/client-${
 			i + 1
 		}.png")`;
 
