@@ -1,0 +1,142 @@
+.footer {
+  padding-block: 120px 60px;
+
+  @include mobile {
+    padding-block: 80px 40px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 57px;
+    border-bottom: 1px solid #D9D9D9;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: start;
+      row-gap: 45px;
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    &-list {
+      display: flex;
+      align-items: center;
+      column-gap: 48px;
+
+      @include tablet {
+        column-gap: 20px;
+      }
+
+      @include mobile {
+        flex-direction: column;
+        align-items: start;
+        row-gap: 28px;
+      }
+    }
+
+    &-item {
+      transition-duration: var(--transition-duration);
+
+      @include hover {
+        &::after {
+          width: 100%;
+          border: 1px solid;
+        }
+      }
+
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -20%;
+        left: 50%;
+        translate: -50%;
+        width: 0;
+        height: 2%;
+        background-color: currentColor;
+        transition-duration: inherit;
+      }
+
+      @media (max-width: 1160px) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+
+    li {
+      align-items: center;
+      display: flex;
+      width: 30px;
+      height: 30px;
+      justify-content: center;
+      cursor: pointer;
+      transition-duration: var(--transition-duration);
+
+
+
+
+      @include hover {
+        color: var(--color-accent);
+      }
+    }
+  }
+
+  &__links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    @media (max-width:1160px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include mobile {
+      display: block;
+    }
+
+
+    p {
+      color: var(--color-gray);
+      font-family: Inter;
+      font-weight: 400;
+      line-height: 133.333%;
+
+      &:last-child {
+        grid-column: 4 / 5;
+      }
+
+      @media (max-width:1160px) {
+        font-size: 16px;
+
+        &:last-child {
+          grid-column: 3/4;
+          justify-self: end;
+          text-wrap: nowrap;
+
+          @include mobile {
+            justify-self: start;
+          }
+        }
+      }
+
+      @include mobile {
+        color: #9F9F9F;
+      }
+    }
+  }
+
+
+}

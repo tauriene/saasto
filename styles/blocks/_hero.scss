@@ -1,0 +1,117 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 800px;
+  margin-inline: auto;
+  row-gap: 24px;
+
+
+  @include mobile {
+    align-items: self-start;
+    row-gap: 12px;
+  }
+
+  &__title {
+    position: relative;
+  }
+
+  &__h1 {
+    text-align: center;
+    z-index: 2;
+    line-height: 140.625%;
+    position: relative;
+
+    @include mobile {
+      text-align: left;
+    }
+
+    @include mobile-s {
+      max-width: 290px;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 65px;
+        height: 76px;
+        background: url(../icons/clock.svg) center / cover no-repeat;
+        top: -45px;
+        right: 0px;
+        z-index: -1;
+      }
+    }
+  }
+
+  &__spot {
+    @media (max-width: 1200px) {
+      top: 30px;
+      left: 60px;
+      width: 140px;
+    }
+
+    @include mobile {
+      top: 25px;
+      width: 102px;
+    }
+
+    @include mobile-s {
+      top: 65px;
+      left: 70px;
+    }
+
+    position: absolute;
+    bottom: 0px;
+    left: 16px;
+    z-index: 1;
+    height: auto;
+    width: 176px;
+  }
+
+  &__description {
+    text-align: center;
+    font-size: 20px;
+    max-width: 650px;
+    color: var(--color-brown);
+    line-height: 180%;
+    padding-bottom: 40px;
+    line-height: 225%; 
+
+
+    @include mobile {
+      text-align: left;
+      font-size: 16px;
+      padding-bottom: 28px;
+    }
+
+  }
+
+  &__button {
+    position: relative;
+
+    @include mobile {
+      &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 63px;
+      height: 75px;
+      background: url(../icons/curved-line-arrow.svg) center / cover no-repeat;
+      top: 30px;
+      right: -70px;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 46px;
+      height: 68px;
+      background: url(../icons/spark.svg) center / cover no-repeat;
+      top: 80px;
+      left: -20px;
+    }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+.logo {
+  &__image {
+    flex-shrink: 0;
+    @include tablet {
+      width: 135px;
+    }
+  }
+}
