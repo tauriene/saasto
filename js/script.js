@@ -39,7 +39,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	let i = 1;
 	setInterval(() => {
 		slides[i].classList.add('testimonials__slide--active');
-		client.style.background = `url("../images/client-${
+		client.style.background = `url("https://tauriene.github.io/saasto/images/client-${
 			i + 1
 		}.png") no-repeat center/cover, var(--color-accent-light) !important`;
 
